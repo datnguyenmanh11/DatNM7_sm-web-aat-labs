@@ -1,0 +1,46 @@
+name: lab-chain-check
+# Kiểm tra chuỗi lab SM-WEB: quét secret (critical fail) + bảng trạng thái chuỗi.
+# Commit có "[submit A3-2]" hoặc "[start A4-3]" trong message → kiểm tra riêng lab đó và FAIL nếu thiếu mục bắt buộc.
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      lab:
+        description: "Mã lab (vd A3-2)"
+        required: true
+      mode:
+        description: "start | submit"
+        required: true
+        default: submit
+
+jobs:
+  chain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Quét secret (critical fail nếu có)
+        run: python scripts/check_lab_chain.py --secrets
+
+      - name: Trạng thái toàn chuỗi
+        if: always()
+        run: python scripts/check_lab_chain.py --all
+
+      - name: Kiểm tra lab theo commit message / dispatch
+        if: always()
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+          IN_LAB: ${{ github.event.inputs.lab }}
+          IN_MODE: ${{ github.event.inputs.mode }}
+        run: |
+          if [ -n "$IN_LAB" ]; then
+            python scripts/check_lab_chain.py "$IN_LAB" --mode "$IN_MODE"; exit $?
+          fi
+          TAG=$(printf '%s' "$MSG" | grep -oE '\[(start|submit) [AF][0-9]-[0-9]\]' | head -1 || true)
+          if [ -z "$TAG" ]; then echo "Không có tag [start|submit <lab>] – bỏ qua."; exit 0; fi
+          MODE=$(echo "$TAG" | tr -d '[]' | cut -d' ' -f1)
+          LAB=$(echo "$TAG" | tr -d '[]' | cut -d' ' -f2)
+          python scripts/check_lab_chain.py "$LAB" --mode "$MODE"
