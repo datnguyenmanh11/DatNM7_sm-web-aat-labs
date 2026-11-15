@@ -1,0 +1,12 @@
+# Nguồn: Colab notebook "DatNM7_sm-web-aat" (https://colab.research.google.com/drive/1AQ1AcQS36L2_hpLpZaGeZwsbKzG4Xgku)
+# Ô chạy F1_variability.py v1.0 – execution_count 10 – 2026-11-15 21:32 (+07:00) – model gemini-3.5-flash-lite
+# Chép NGUYÊN VĂN output đã lưu trong notebook. Script v1.0 chỉ in 150 ký tự đầu mỗi output.
+# File raw đầy đủ của batch này đã bị lần chạy 21:33 ghi đè (tên file cố định). Batch dùng để nộp: 21:33 (F1-3/raw_ai_output/). File này chỉ là bằng chứng bổ sung.
+[run 1] E1 temp=0.0 ctx=True sha1=16eed46dcf | '- Nhập số lượng sản phẩm bằng 0 (dưới 1)\n- Nhập số lượng sản phẩm bằng 5 (trong khoảng hợp lệ từ 1 đến 10)\n- Nhập số lượng sản phẩm bằng 11 (lớn hơn 1'
+[run 2] E1 temp=0.0 ctx=True sha1=f47138d95a | 'Không có trong tài liệu'
+[run 3] E1 temp=0.0 ctx=True sha1=b15e6738dc | '1. Nhập số lượng sản phẩm là 0 (giá trị < 1)\n2. Nhập số lượng sản phẩm là 5 (giá trị hợp lệ từ 1 đến 10)\n3. Nhập số lượng sản phẩm là 11 (giá trị > 10'
+[run 4] E1 temp=1.0 ctx=True sha1=ba600e36ef | '- Nhập số lượng sản phẩm bằng 0 (dưới 1)\n- Nhập số lượng sản phẩm bằng 5 (hợp lệ trong khoảng từ 1 đến 10)\n- Nhập số lượng sản phẩm bằng 11 (lớn hơn 1'
+[run 5] E1 temp=1.0 ctx=True sha1=ba600e36ef | '- Nhập số lượng sản phẩm bằng 0 (dưới 1)\n- Nhập số lượng sản phẩm bằng 5 (hợp lệ trong khoảng từ 1 đến 10)\n- Nhập số lượng sản phẩm bằng 11 (lớn hơn 1'
+[run 6] E1 temp=1.0 ctx=True sha1=9d3f8e6786 | '1. Nhập số lượng sản phẩm trong giỏ bằng 0 (nhỏ hơn 1), hệ thống không chấp nhận và hiển thị thông báo.\n2. Nhập số lượng sản phẩm trong giỏ bằng 5 (nằ'
+[run 7] E2 temp=0.0 ctx=True sha1=b66fc970e9 | 'Theo SRS, khách được đặt tối đa **10** sản phẩm cùng loại trong giỏ (số lượng từ 1 đến 10). \n\nNếu vượt giới hạn (nhập số lượng < 1 hoặc > 10), hệ thốn'
+[run 8] E2 temp=0.0 ctx=False sha1=5f0fee0c66 | 'Không có trong tài liệu.'

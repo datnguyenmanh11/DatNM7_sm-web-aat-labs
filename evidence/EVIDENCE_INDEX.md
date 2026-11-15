@@ -9,7 +9,7 @@
 ## Bảng bằng chứng
 | Lab | Sản phẩm | Đường dẫn trong repo | Link commit nộp | Ngày nộp | Kết quả review | Commit fix comment |
 |---|---|---|---|---|---|---|
-| F1-3 | | | | | | |
+| F1-3 | F1_Experiment_Log (8 lần chạy, batch 21:33, có token) + raw output + log gọi API; bổ sung: output batch 21:32. **Còn thiếu:** conclusion.md, F1-1_notes.md | `F1-3/F1_Experiment_Log.csv`, `F1-3/raw_ai_output/`, `F1-3/evidence/batch_2132_notebook_output.txt`, `F3_AI_Usage_Escalation_Log.csv` (F3-001) | (commit bên dưới) | Chưa nộp form | | |
 | F2-3 | | | | | | |
 | F6-2 | | | | | | |
 | A1-4 | | | | | | |
