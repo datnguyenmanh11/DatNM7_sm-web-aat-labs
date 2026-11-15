@@ -1,0 +1,3 @@
+- Nhập số lượng sản phẩm bằng 0 (dưới 1)
+- Nhập số lượng sản phẩm bằng 5 (hợp lệ trong khoảng từ 1 đến 10)
+- Nhập số lượng sản phẩm bằng 11 (lớn hơn 10)

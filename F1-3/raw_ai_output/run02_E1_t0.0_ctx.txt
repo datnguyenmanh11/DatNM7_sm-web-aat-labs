@@ -1,0 +1,3 @@
+- Số lượng sản phẩm bằng 0 (giá trị < 1)
+- Số lượng sản phẩm bằng 5 (giá trị hợp lệ từ 1 đến 10)
+- Số lượng sản phẩm bằng 11 (giá trị > 10)

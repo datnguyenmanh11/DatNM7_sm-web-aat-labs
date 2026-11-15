@@ -1,0 +1,3 @@
+- Nhập số lượng sản phẩm trong giỏ bằng 0, hệ thống không chấp nhận và hiển thị thông báo.
+- Nhập số lượng sản phẩm trong giỏ bằng 5, hệ thống chấp nhận.
+- Nhập số lượng sản phẩm trong giỏ bằng 11, hệ thống không chấp nhận và hiển thị thông báo.
